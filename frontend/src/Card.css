@@ -1,0 +1,46 @@
+.card {
+    background: white;
+    width: 100%;
+    margin: 0 1rem 1rem 0;
+    border: 1px solid #e0e1e0;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+}
+
+.card .title {
+    font-weight: 500;
+    margin: 10px 15px;
+    max-width: inherit;
+}
+
+.card .text {
+    color: #444444;
+    margin: 10px 15px 24px;
+    max-width: inherit;
+  }
+
+.card .footer {
+    display: flex;
+    margin-top: 15px;
+    padding: 0;
+    justify-content: right;
+  }
+
+.card button {
+    border: none;
+    background: none;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.card .delete {
+    width: 20px;
+    height: 20px;
+    fill: #a0a0a0;
+}
+
+.card .delete:hover {
+    fill: #000000;
+}
