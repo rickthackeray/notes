@@ -7,7 +7,7 @@ import AddCard from "./AddCard"
 function App() {
   const [cardData, setCardData] = useState([])
 
-  const host = 'http://10.1.1.121:8000'
+  const host = 'http://127.0.0.1:8000'
 
   useEffect(() => {
     loadCardData()

@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from mangum import Mangum
 import database
-
+import mangum
 
 app = FastAPI()
 
@@ -20,6 +20,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+@app.get("/")
+async def root():
+    return {"root works..."}
 
 @app.get("/cards")
 async def get_cards():
