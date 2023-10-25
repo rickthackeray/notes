@@ -26,8 +26,6 @@ export default function AddCardForm(props) {
         })
     }
 
-
-
     return (
         <div className="addcard">
             <form onSubmit={handleSubmit}>
@@ -56,11 +54,4 @@ export default function AddCardForm(props) {
             </form>
         </div>
     )
-
-
-
-
-
 }
-
-
