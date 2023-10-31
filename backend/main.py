@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from mangum import Mangum
+
 import database
 import uvicorn
 
 
 app = FastAPI()
-handler = Mangum(app)
+
 
 origins = ["http://10.1.1.*",
            "http://localhost",
@@ -50,4 +50,4 @@ async def delete_card(id):
     return response
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
