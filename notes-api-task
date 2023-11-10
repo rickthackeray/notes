@@ -1,0 +1,43 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-west-2:584916250327:task-definition/notes-api-task:3",
+    "containerDefinitions": [
+        {
+            "name": "notes-api-container",
+            "image": "584916250327.dkr.ecr.us-west-2.amazonaws.com/notes-api",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "notes-api-container-8000-tcp",
+                    "containerPort": 8000,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "notes-api-task",
+    "revision": 3,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "100",
+    "registeredAt": "2023-11-01T23:44:40.813Z",
+    "registeredBy": "arn:aws:iam::584916250327:user/rickawesome",
+    "tags": []
+}
