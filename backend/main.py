@@ -24,7 +24,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"root works...?"}
+    return {"root works...??"}
 
 @app.get("/cards")
 async def get_cards():
