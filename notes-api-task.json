@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-west-2:584916250327:task-definition/notes-api-task:3",
+    "taskDefinitionArn": "arn:aws:ecs:us-west-2:584916250327:task-definition/notes-api-task:9",
     "containerDefinitions": [
         {
             "name": "notes-api-container",
@@ -15,13 +15,26 @@
             ],
             "essential": true,
             "environment": [],
-            "mountPoints": [],
+            "mountPoints": [
+                {
+                    "sourceVolume": "keys",
+                    "containerPath": "/app/keys.env",
+                    "readOnly": false
+                }
+            ],
             "volumesFrom": []
         }
     ],
     "family": "notes-api-task",
     "revision": 9,
-    "volumes": [],
+    "volumes": [
+        {
+            "name": "keys",
+            "host": {
+                "sourcePath": "/home/ec2-user/keys.env"
+            }
+        }
+    ],
     "status": "ACTIVE",
     "requiresAttributes": [
         {
@@ -37,7 +50,7 @@
     ],
     "cpu": "1024",
     "memory": "100",
-    "registeredAt": "2023-11-01T23:44:40.813Z",
+    "registeredAt": "2023-11-15T01:19:16.910Z",
     "registeredBy": "arn:aws:iam::584916250327:user/rickawesome",
     "tags": []
 }
