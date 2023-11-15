@@ -20,7 +20,7 @@
         }
     ],
     "family": "notes-api-task",
-    "revision": 7,
+    "revision": 9,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
