@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import socket
+
 import database
 import uvicorn
-
 
 app = FastAPI()
 
@@ -24,7 +25,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"root works!!! saluton!"}
+    return {f"Container ID: {socket.gethostname()}"}
 
 @app.get("/cards")
 async def get_cards():
